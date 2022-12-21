@@ -1,0 +1,51 @@
+h2{
+    padding-top: 4rem;
+}
+
+p{
+    padding-top: 3rem;
+}
+#aws-img{
+    width: 60%;
+}
+#paraimg{
+    display: flex;
+}
+.btn-startnow{
+    background-color: rgb(232, 182, 18);
+    border-radius: 2%;
+    border: 0ch;
+   
+   }
+   .container-fluid{
+    display: flex;
+   }
+  .stepper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+   
+    li{
+
+        list-style: none;
+        width: 30px;
+        height: 30px;
+        border-radius: 60%;
+        background-color: rgba(219, 205, 205, 0.781);
+        margin: 14px 0;
+        display: grid;
+        place-items: center;
+        position: relative;
+        &::after{
+            content: "";
+            position: absolute;
+            width: 166px;
+            height: 5px;
+            background-color: rgba(219, 205, 205, 0.781);
+            right: 30px;
+        }
+    }
+    
+
+   }
