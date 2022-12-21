@@ -94,9 +94,6 @@ h4 {
   text-align: center;
 }
 
-/* padding-top: 9rem; */
-/* padding-top: 9rem; */
-/* float: left; */
-/* float: left; */
-/* width: 50%; */
-/* width: 50%; *//*# sourceMappingURL=style.css.map */
+.card.active {
+  display: block;
+}/*# sourceMappingURL=style.css.map */

@@ -74,6 +74,7 @@ h2{
     width:50%;
     margin-bottom: 10em;
     margin-left: 20rem;
+    // display: none;
 }
 .btn-info{
     margin-bottom: 20px;
@@ -84,16 +85,6 @@ h4{
     
 }
 
-// p {
-    /* padding-top: 9rem; */
-    /* padding-top: 9rem; */
-// }
-//   .progressbar {
-    // display: flex;
-//   .progressbar li {
-    /* float: left; */
-    /* float: left; */
-//   .container-info {
-    /* width: 50%; */
-    /* width: 50%; */
-//   }
+.card.active {
+    display: block;
+}
