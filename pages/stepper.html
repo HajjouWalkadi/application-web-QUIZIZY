@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animated Step Progress Bar</title>
+    <title>Quizizy</title>
     <link rel="stylesheet" href="../style.css">
     
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
@@ -13,28 +13,34 @@
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 </head>
 <body>
-    <div class="main-stepper">
-        <ul class="stepper">
-            <li class="info">
-                <!-- <i class="fas fa-exclamation-circle "></i> -->
-                
-                <p class="text">Informations</p>
-                <!-- <i class="icon uil uil-clipboard-notes"></i> -->
-            </li>
-            <li>
-                <p class="text">Questions</p>
-                <!-- <i class="icon uil uil-clipboard-notes"></i> -->
-               
-            </li>
-            <li>
-                <p class="text">Résultat</p>
-                <!-- <i class="icon uil uil-clipboard-notes"></i> -->
-                
-            </li>
+    <div class="container">
+        <ul class="progressbar">
+            <li id="one" class="active">Informations</li>
+            <li id="tow"> Questionnaire</li>
+            <li id="three">Résultat</li>
         </ul>
-
     </div>
 
+    <div class="card">
+        <div class="container-info">
+            <h4>Informations</h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit
+            . Sit consequuntur pariatur quod accusantium officia ut illo 
+            ullam nobis atque ratione, nemo tempore corporis expedita, ad ex
+             dolorum eaque aperiam repellendus. Enim exercitationem itaque placeat 
+             a officia inventore adipisci iure est at accusamus aliquid, magn
+              ullam nobis atque ratione, nemo tempore corporis expedita, ad ex
+               dolorum eaque aperiam repellendus. Enim exercitationem itaque placeat 
+               a officia inventore adipisci iure est at accusamus aliquid, magnam soluta
+               beatae iusto rerum debitis deleniti.
+               Lorem ipsum dolor sit amet consectetur a</p>
+        </div>
+        <div>
+            <button class="btn-info active">Next</button>
+        </div>
+      </div>
+    
+      
     <script src="../assets/main.js"></script>
 </body>
 </html>
