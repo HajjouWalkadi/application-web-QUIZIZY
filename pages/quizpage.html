@@ -12,12 +12,13 @@
     <!-- UniIcon CDN Link  -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 </head>
-<body>
+<body style="background-color:#000000;">
+    <div></div>
     <div class="container">
         <ul class="progressbar">
-            <li id="one" class="active">Informations</li>
-            <li id="tow"> Questionnaire</li>
-            <li id="three">Résultat</li>
+            <li id="one" style="color: #FAF3E3;" class="active">Informations</li>
+            <li id="tow" style="color: #FAF3E3;"> Quiz</li>
+            <li id="three" style="color: #FAF3E3;">Résultat</li>
         </ul>
     </div>
 
@@ -37,7 +38,7 @@
                     Lorem ipsum dolor sit amet consectetur a</p>
             </div>
             <div>
-                <button class="btn-info active" id="next" onclick="start()">Start quiz</button>
+                <button class="btn-info active" id="next" onclick="startQuiz()">Start quiz</button>
             </div>
         </div>
     </div>
@@ -46,41 +47,23 @@
             <div class="container-info">
                 <h4 id="question"></h4>
                 <div id="options">
-                    
-                    
                 </div>
             </div>
         </div>
-        <button>Submit answer</button>
+        <button class="submitbtn" onclick="nextQuiz()">Submit answer</button>
     </div>
-    
-      
-    <script src="../assets/main.js"></script>
+    <div class="card result-card" style="display: none;">
+        <div class="">
+            <div class="container-info">
+                <h4 id="Your result"></h4>
+            </div>
+        </div>
+        <button  onclick="nextQuiz()">Submit answer</button>
+    </div>
+          
     <script src="../assets/js/data.js"></script>
-    <script>
-        // function start(){
-            
-        //     informationCard = document.querySelector('.information-card').style.display = "none";
-        //     questionCard = document.querySelector('.questions-card').style.display = "block";
-        //     optionsElement = document.querySelector('#options');
-        //     questionElement = document.querySelector('#question');
-
-        //     options = questions[1].options;
-        //     question = questions[1].question;
-
-
-        //     questionElement.innerHTML = question;
-        //     for (let index = 0; index < options.length; index++) {
-        //     optionsElement.innerHTML += `<div class="form-check">
-        //             <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-        //             <label class="form-check-label" for="flexRadioDefault1">
-        //                 ${ options[index] }
-        //             </label>
-        //         </div>`
-        //     }
-        //     // questionElement
-        // }
-    </script>
+    <script src="../assets/main.js"></script>
+    
 </body>
 </html>
 

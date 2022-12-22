@@ -1,12 +1,40 @@
-function start(){
+
+let index = 0;
+
+function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+  }
+function startQuiz(){
+        
+    // if( answer ) index ++;
+
+    // if (index = max ) stop 
+
+    start(index);
+}
+function nextQuiz(){
+    index++;
+    start(index);
+}
+
+let quiz_questions = shuffle(questions);
+
+function start(qIndex){
             
     informationCard = document.querySelector('.information-card').style.display = "none";
     questionCard = document.querySelector('.questions-card').style.display = "block";
     optionsElement = document.querySelector('#options');
     questionElement = document.querySelector('#question');
+    
+    optionsElement.innerHTML = '';
+    questionElement.innerHTML = '';
 
-    options = questions[1].options;
-    question = questions[1].question;
+    options = quiz_questions[qIndex].options;
+    question = quiz_questions[qIndex].question;
 
 
     questionElement.innerHTML = question;
@@ -18,5 +46,4 @@ function start(){
             </label>
         </div>`
     }
-    // questionElement
 }
