@@ -43,22 +43,23 @@
         </div>
     </div>
     <div class="card questions-card" style="display: none;">
-        <div class="">
-            <div class="container-info">
-                <h4 id="question"></h4>
-                <div id="options">
-                </div>
-            </div>
+        <div id="question" ></div>
+        <div class="cartes-container" id="cartes-container">
+            <button class="cartes" id="options1" onclick="check(this)"></button>
+            <button class="cartes" id="options2" onclick="check(this)"></button>
+            <button class="cartes" id="options3" onclick="check(this)"></button>
+            <button class="cartes" id="options4" onclick="check(this)"></button>
         </div>
         <button class="submitbtn" onclick="nextQuiz()">Submit answer</button>
+        <div class="progress"><span style="color:white; margin-right: 0.5rem;"><span class="result-num" id="result-num">1</span>/10</span><div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div></div>
+
     </div>
-    <div class="card result-card" style="display: none;">
+    <!-- <div class="card result-card" style="display: none;">
         <div class="">
             <div class="container-info">
                 <h4 id="Your result"></h4>
             </div>
-        </div>
-        <button  onclick="nextQuiz()">Submit answer</button>
+        </div> -->
     </div>
           
     <script src="../assets/js/data.js"></script>
