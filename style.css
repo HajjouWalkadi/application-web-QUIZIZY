@@ -4,6 +4,7 @@ h2 {
 
 p {
   padding: 1rem;
+  margin: 0;
 }
 
 #aws-img {
@@ -40,24 +41,40 @@ p {
   overflow: hidden;
   margin-bottom: 10em;
   margin-left: 20rem;
-  padding-bottom: 5%;
+  padding-bottom: 1rem;
 }
 
 .information-card {
   box-shadow: 0 0 20px 4px #FF9F29;
   border-radius: 15px;
   position: absolute;
-  background-color: white;
+  background-color: #FAF3E3;
   width: 50%;
   text-align: center;
 }
 
 .btn-info {
-  border-radius: 10%;
+  width: 50%;
+  transition: 0.3s;
+}
+.btn-info:hover {
+  background: none;
+  border: 1px solid #1A4D2E;
+  color: #1A4D2E;
+}
+.btn-info:active {
+  background-color: #FF9F29;
+  transition: 0s;
+  border: 1px solid #FF9F29;
+  color: white;
 }
 
 h4 {
   text-align: center;
+  font-weight: 300;
+  font-size: 3rem;
+  padding: 0;
+  margin: 0;
 }
 
 .card.active {
@@ -65,9 +82,9 @@ h4 {
 }
 
 button {
-  background-color: #1A4D2E;
+  background: #1A4D2E;
   color: #FAF3E3;
-  border: 0px;
+  border: 1px solid #1A4D2E;
   padding: 0.6rem;
   border-radius: 10px;
 }
@@ -152,6 +169,10 @@ button {
   }
 }
 .questions-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   margin-top: 5rem;
   width: 40rem;
   background: none;
@@ -160,7 +181,7 @@ button {
 }
 
 #question {
-  color: white;
+  color: #FAF3E3;
   text-align: center;
   padding: 0.2rem;
 }
@@ -185,7 +206,7 @@ button {
   width: var(--circle-size);
   height: var(--circle-size);
   border-radius: 50%;
-  background-color: lightgrey;
+  background-color: #FAF3E3;
 }
 .c-stepper__item .greencolor {
   color: green;
@@ -197,14 +218,14 @@ button {
   content: "";
   position: relative;
   z-index: -1;
-  height: 2px;
-  background-color: #e0e0e0;
+  height: 3px;
+  background-color: #FAF3E3;
   flex: 1;
   margin-right: 0.5rem;
 }
 
 .c-stepper__title {
-  font-weight: bold;
+  font-weight: 100;
   font-size: clamp(1rem, 4vw, 1.25rem);
 }
 
@@ -222,4 +243,21 @@ body {
 *:before,
 *:after {
   box-sizing: border-box;
+}
+
+.activeStep:before {
+  content: "";
+  display: block;
+  width: var(--circle-size);
+  height: var(--circle-size);
+  border-radius: 50%;
+  background-color: #1A4D2E;
+  transition: 0.3s ease-in;
+}
+
+#showResult {
+  width: 30%;
+  margin-top: 1rem;
+  left: 38%;
+  position: absolute;
 }/*# sourceMappingURL=style.css.map */
