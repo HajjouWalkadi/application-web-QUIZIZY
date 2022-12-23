@@ -13,16 +13,29 @@
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 </head>
 <body style="background-color:#000000;">
-    <div></div>
+    <!-- <div></div>
     <div class="container">
         <ul class="progressbar">
             <li id="one" style="color: #FAF3E3;" class="active">Informations</li>
             <li id="tow" style="color: #FAF3E3;"> Quiz</li>
             <li id="three" style="color: #FAF3E3;">Résultat</li>
         </ul>
+    </div> -->
+    <div class="wrapper">
+        <ol class="c-stepper">
+          <li onclick="changeContenu(0)" class="c-stepper__item" style="color: green">
+            <h3 class="c-stepper__title">Informations</h3>
+          </li>
+          <li onclick="changeContenu(1)" class="c-stepper__item" style="color: #FAF3E3">
+            <h3 class="c-stepper__title" id="step2">Quiz</h3>
+          </li>
+          <li onclick="changeContenu(2)" class="c-stepper__item" style="color: #FAF3E3">
+            <h3 class="c-stepper__title">Résultat</h3>
+          </li>
+        </ol>
     </div>
 
-    <div class="card information-card">
+    <container class="card information-card">
         <div class="">
             <div class="container-info">
                 <h4>Informations</h4>
@@ -41,8 +54,15 @@
                 <button class="btn-info active" id="next" onclick="startQuiz()">Start quiz</button>
             </div>
         </div>
-    </div>
-    <div class="card questions-card" style="display: none;">
+    </container>
+    <container class="card questions-card" style="display: none;">
+        <div class="progressAll1">
+            <div class="progressAll2">
+                <span class="numero"><span class="result-num" id="result-num">1</span>/10</span>
+                <div class="progressBar"></div>
+                <div class="progressing" id="progressing"></div>
+            </div>
+        </div>
         <div id="question" ></div>
         <div class="cartes-container" id="cartes-container">
             <button class="cartes" id="options1" onclick="check(this)"></button>
@@ -50,17 +70,17 @@
             <button class="cartes" id="options3" onclick="check(this)"></button>
             <button class="cartes" id="options4" onclick="check(this)"></button>
         </div>
-        <button class="submitbtn" onclick="nextQuiz()">Submit answer</button>
-        <div class="progress"><span style="color:white; margin-right: 0.5rem;"><span class="result-num" id="result-num">1</span>/10</span><div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div></div>
+        <!-- <button class="submitbtn" onclick="nextQuiz()">Submit answer</button> -->
 
-    </div>
-    <!-- <div class="card result-card" style="display: none;">
+    </container>
+    <container class="card result-card" style="display: none;">
         <div class="">
             <div class="container-info">
                 <h4 id="Your result"></h4>
             </div>
-        </div> -->
-    </div>
+    </container>
+
+</div>
           
     <script src="../assets/js/data.js"></script>
     <script src="../assets/main.js"></script>

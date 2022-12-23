@@ -7,7 +7,8 @@ let optionsElement4 = document.getElementById('options4');
 let questionElement = document.querySelector('#question');
 let num_result=document.getElementById("result-num");
 let AllAnswers=document.getElementById("cartes-container");
-
+let step2=document.getElementById("step2");
+let progressing =document.getElementById("progressing");
 // function shuffle(array) {
 //     for (let i = array.length - 1; i > 0; i--) {
 //       const j = Math.floor(Math.random() * (i + 1));
@@ -37,6 +38,7 @@ function start(){
     informationCard = document.querySelector('.information-card').style.display = "none";
     questionCard = document.querySelector('.questions-card').style.display = "block";
     show(index);
+    step2.classList.add('greencolor');
 
     // for (let index = 0; index < options.length; index++) {
     // optionsElement.innerHTML += `<div class="form-check">
@@ -49,7 +51,7 @@ function start(){
 }
 
 function check(e){
-    console.log(e.textContent);
+    // console.log(e.textContent);
     nextQuiz();
 }
 
@@ -62,6 +64,9 @@ function show(qIndex){
 
     questionElement.innerText= quiz_questions[qIndex].question;
     num_result.innerText=qIndex+1;
+    for(let i=0;i<qIndex+2;i++){
+        progressing.style.width = i*3.5+"rem";
+    }
 
 }
 function nexttt(){
@@ -79,4 +84,29 @@ function resetAll(){
     while(AllAnswers.firstChild){
         AllAnswers.removeChild(AllAnswers.firstChild)
     }
+}
+
+
+let bodyContainer = document.getElementsByTagName('container');
+let btnCircleChose = document.getElementsByTagName('h3');
+
+console.log(btnCircleChose);
+
+
+bodyContainer[0].style.display = "block";
+bodyContainer[1].style.display = "none";
+bodyContainer[2].style.display = "none";
+
+function changeContenu(index){
+    bodyContainer[0].style.display = "none";
+    bodyContainer[1].style.display = "none";
+    bodyContainer[2].style.display = "none";
+
+    btnCircleChose[0].style.color = "#FAF3E3";
+    btnCircleChose[1].style.color = "#FAF3E3";
+    btnCircleChose[2].style.color = "#FAF3E3";
+
+    bodyContainer[index].style.display = "block";
+    btnCircleChose[index].style.color = "green";
+
 }
