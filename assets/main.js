@@ -21,6 +21,8 @@ let circle2 = document.getElementById("corcile2");
 let circle3 = document.getElementById("corcile3");
 let showResult =document.getElementById("showResult");
 let resultCard = document.getElementById("result-card");
+let YourResult =document.getElementById("YourResult")
+let result=0;
 function startQuiz(){
 
     start();
@@ -51,16 +53,19 @@ function start(){
     // }
 }
 
-function check(){
+function check(num){
     nextQuiz();
+    if(questions[index].options[num].correct){
+        result++;
+    }
 }
 
 function show(question){
    
-    optionsElement1.innerText = question.options[0];        
-    optionsElement2.innerText = question.options[1];        
-    optionsElement3.innerText = question.options[2];        
-    optionsElement4.innerText = question.options[3];
+    optionsElement1.innerText = question.options[0].text;        
+    optionsElement2.innerText = question.options[1].text;        
+    optionsElement3.innerText = question.options[2].text;        
+    optionsElement4.innerText = question.options[3].text;
     questionElement.innerText= question.question;
     num_result.innerText=index+1;
     for(let i=0;i<index+2;i++){
@@ -69,11 +74,11 @@ function show(question){
 
 }
 function nexttt(){
-    show(quiz_questions[index]);
-    if(index > 8){ 
+    if(index > 9){ 
         showResult.style.display="block";
+        YourResult.innerHTML = result;
     }
-    // resetAll();
+    show(quiz_questions[index]);
 }
 
 // //progress bar
@@ -114,10 +119,11 @@ function changeContenu(index){
 }
 
 function ShowResults(){
-    console.log("bkbkb")
     informationCard = document.querySelector('.information-card').style.display = "none";
     questionCard = document.querySelector('.questions-card').style.display = "none";
     resultCard.style.display="block";
     step3.classList.add('greencolor');
     circle3.classList.add("activeStep");
 }
+
+

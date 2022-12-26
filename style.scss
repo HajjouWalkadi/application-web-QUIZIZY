@@ -125,9 +125,6 @@ margin: 0;
 
        
      }
-
-    // border-radius: 10%;
-    // padding-bottom: 5%;
 }
 h4{
     text-align: center;
@@ -146,9 +143,6 @@ button{
     border: 1px solid #1A4D2E;
     padding: 0.6rem;
     border-radius: 10px;
-    // display: none;
-    
-    // justify-content:center;
 }
 .submitbtn{
     display: block;
@@ -160,6 +154,7 @@ button{
 }
 #options{
     margin-bottom: 19px;
+    
 }
 
 /* Style the progress bar */
@@ -217,7 +212,10 @@ button{
     margin: 10px;
     background-color: #FAF3E3;
     color: black;
-   
+    border: 0ch;
+     &:hover{
+      background-color: #FF9F29;
+       }  
   }
   
   @media (min-width: 600px) {
@@ -340,4 +338,16 @@ button{
     margin-top: 1rem;
     left: 38%;
     position: absolute;
+    transition: 0.3s;
+     &:hover{
+      background: none;
+      border: 1px solid #1A4D2E;
+      color: #FAF3E3;
+     }
+     &:active{
+       background-color: #FF9F29;
+       transition: 0s;
+       border: 1px solid #FF9F29;
+       color: white;
     }
+  }

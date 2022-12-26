@@ -161,6 +161,10 @@ button {
   margin: 10px;
   background-color: #FAF3E3;
   color: black;
+  border: 0ch;
+}
+.cartes:hover {
+  background-color: #FF9F29;
 }
 
 @media (min-width: 600px) {
@@ -260,4 +264,16 @@ body {
   margin-top: 1rem;
   left: 38%;
   position: absolute;
+  transition: 0.3s;
+}
+#showResult:hover {
+  background: none;
+  border: 1px solid #1A4D2E;
+  color: #FAF3E3;
+}
+#showResult:active {
+  background-color: #FF9F29;
+  transition: 0s;
+  border: 1px solid #FF9F29;
+  color: white;
 }/*# sourceMappingURL=style.css.map */
