@@ -87,6 +87,7 @@ button {
   border: 1px solid #1A4D2E;
   padding: 0.6rem;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .submitbtn {
@@ -272,6 +273,23 @@ body {
   color: #FAF3E3;
 }
 #showResult:active {
+  background-color: #FF9F29;
+  transition: 0s;
+  border: 1px solid #FF9F29;
+  color: white;
+}
+
+#showCorrection {
+  width: 30%;
+  margin-top: 1rem;
+  transition: 0.3s;
+}
+#showCorrection:hover {
+  background-color: black;
+  border: 1px solid #1A4D2E;
+  color: #FAF3E3;
+}
+#showCorrection:active {
   background-color: #FF9F29;
   transition: 0s;
   border: 1px solid #FF9F29;

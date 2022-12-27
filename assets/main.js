@@ -10,13 +10,6 @@ let AllAnswers=document.getElementById("cartes-container");
 let step2=document.getElementById("step2");
 let step3=document.getElementById("step3");
 let progressing =document.getElementById("progressing");
-// function shuffle(array) {
-//     for (let i = array.length - 1; i > 0; i--) {
-//       const j = Math.floor(Math.random() * (i + 1));
-//       [array[i], array[j]] = [array[j], array[i]];
-//     }
-//     return array;
-//   }
 let circle2 = document.getElementById("corcile2");
 let circle3 = document.getElementById("corcile3");
 let showResult =document.getElementById("showResult");
@@ -28,50 +21,47 @@ function startQuiz(){
     start();
 }
 function nextQuiz(){
-    nexttt();
     index++;
+    nexttt();
 }
 
 
 function start(){
             
-    informationCard = document.querySelector('.information-card').style.display = "none";
-    questionCard = document.querySelector('.questions-card').style.display = "block";
+    document.querySelector('.information-card').style.display = "none";
+    document.querySelector('.questions-card').style.display = "block";
     showResult.style.display="none";
     quiz_questions =  questions.sort(()=> Math.random() - .5);
+    console.log(questions);
     index = 0;
     step2.classList.add('greencolor');
     circle2.classList.add("activeStep");
     nexttt();
-    // for (let index = 0; index < options.length; index++) {
-    // optionsElement.innerHTML += `<div class="form-check">
-    //         <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-    //         <label class="form-check-label" for="flexRadioDefault1">
-    //             ${ options[index] }
-    //         </label>
-    //     </div>`
-    // }
 }
 
 function check(num){
-    nextQuiz();
     if(questions[index].options[num].correct){
         result++;
     }
+    else{
+        questions[index].incorrect="true";
+        console.log(questions);
+    }
+    nextQuiz();
 }
 
 function show(question){
-   
-    optionsElement1.innerText = question.options[0].text;        
-    optionsElement2.innerText = question.options[1].text;        
-    optionsElement3.innerText = question.options[2].text;        
-    optionsElement4.innerText = question.options[3].text;
-    questionElement.innerText= question.question;
-    num_result.innerText=index+1;
-    for(let i=0;i<index+2;i++){
-        progressing.style.width = i*3.5+"rem";
+    if(index<questions.length){
+        optionsElement1.innerText = question.options[0].text;        
+        optionsElement2.innerText = question.options[1].text;        
+        optionsElement3.innerText = question.options[2].text;        
+        optionsElement4.innerText = question.options[3].text;
+        questionElement.innerText= question.question;
+        num_result.innerText=index+1;
+        for(let i=0;i<index+2;i++){
+            progressing.style.width = i*3.5+"rem";
+        }
     }
-
 }
 function nexttt(){
     if(index > 9){ 
@@ -87,17 +77,11 @@ function nexttt(){
 // progressBar.setAttribute('aria-valuenow', progress);
 // progressBar.style.width = progress + '%';
 
-// function resetAll(){
-//     while(AllAnswers.firstChild){
-//         AllAnswers.removeChild(AllAnswers.firstChild)
-//     }
-// }
+
 
 
 let bodyContainer = document.getElementsByTagName('container');
 let btnCircleChose = document.getElementsByTagName('h3');
-
-console.log(btnCircleChose);
 
 
 bodyContainer[0].style.display = "block";
@@ -119,11 +103,23 @@ function changeContenu(index){
 }
 
 function ShowResults(){
-    informationCard = document.querySelector('.information-card').style.display = "none";
-    questionCard = document.querySelector('.questions-card').style.display = "none";
+    document.querySelector('.information-card').style.display = "none";
+    document.querySelector('.questions-card').style.display = "none";
     resultCard.style.display="block";
     step3.classList.add('greencolor');
     circle3.classList.add("activeStep");
 }
 
+document.querySelector("#showCorrection").addEventListener('click',()=>{
+    let html="";
+    questions.forEach(question => {
+        if(question.incorrect=="true"){
+            html+=`<div>
+                    <h3>"${question.question}"</h3>
+                    <p>${question.answers}</p>
+                </div>`
+        }
+    });
+    resultCard.innerHTML = html;
+    });
 
