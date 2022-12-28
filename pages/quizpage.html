@@ -13,14 +13,6 @@
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 </head>
 <body style="background-color:#000000;">
-    <!-- <div></div>
-    <div class="container">
-        <ul class="progressbar">
-            <li id="one" style="color: #FAF3E3;" class="active">Informations</li>
-            <li id="tow" style="color: #FAF3E3;"> Quiz</li>
-            <li id="three" style="color: #FAF3E3;">Résultat</li>
-        </ul>
-    </div> -->
     <div class="wrapper">
         <ol class="c-stepper">
           <li onclick="changeContenu(0)" class="c-stepper__item activeStep" style="color: green">
@@ -38,16 +30,7 @@
         <div class="">
             <div class="container-info">
                 <h4>Informations</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit
-                    . Sit consequuntur pariatur quod accusantium officia ut illo 
-                    ullam nobis atque ratione, nemo tempore corporis expedita, ad ex
-                    dolorum eaque aperiam repellendus. Enim exercitationem itaque placeat 
-                    a officia inventore adipisci iure est at accusamus aliquid, magn
-                    ullam nobis atque ratione, nemo tempore corporis expedita, ad ex
-                    dolorum eaque aperiam repellendus. Enim exercitationem itaque placeat 
-                    a officia inventore adipisci iure est at accusamus aliquid, magnam soluta
-                    beatae iusto rerum debitis deleniti.
-                    Lorem ipsum dolor sit amet consectetur a</p>
+                <p>This quiz includes 10 questions in total that you can access even on your mobile. It consists of AWS Cloud. Each question you receive is explained in detail at the end of your practice test for better understanding.</p>
             </div>
             <div>
                 <button class="btn-info active" id="next" onclick="startQuiz()">Start quiz</button>
@@ -69,18 +52,18 @@
             <button class="cartes" id="options3" onclick="check(2)"></button>
             <button class="cartes" id="options4" onclick="check(3)"></button>
         </div>
-        <!-- <button class="submitbtn" onclick="nextQuiz()">Submit answer</button> -->
         <button id="showResult" onclick="ShowResults()">Show results</button>
+
+        <!-- <button class="submitbtn" onclick="nextQuiz()">Submit answer</button> -->
     </container>
     <container class="card result-card" id="result-card" style="display: none;">
-        <div class="">
             <div class="score">
                 <p  style="color: #1A4D2E; font-size: large;">congratulations, you have reached the end of the quiz</p>
                 <h4  style="color: #FF9F29;">Your score</h4>
-                <span id="YourResult"></span><span>/10</span>
+                <span><span id="YourResult"></span>/10</span>
+                <button id="showCorrection">Show correction</button>
+                <!-- <button id="tryagain" onclick="startQuiz()">try again</button> -->
             </div>
-            <button id="showCorrection">Show correction</button>
-        </div>
     </container>
 
 </div>

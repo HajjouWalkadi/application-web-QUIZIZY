@@ -298,4 +298,26 @@ body {
   transition: 0s;
   border: 1px solid #FF9F29;
   color: white;
+}
+
+.score {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.justification {
+  padding: 1rem;
+}
+
+.explanation {
+  color: #FF9F29;
+  border: 2px solid #1A4D2E;
+}
+
+@media (min-width: 600px) {
+  .card {
+    width: calc(50% - 20px);
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -114,9 +114,10 @@ document.querySelector("#showCorrection").addEventListener('click',()=>{
     let html="";
     questions.forEach(question => {
         if(question.incorrect=="true"){
-            html+=`<div>
+            html+=`<div class="justification">
                     <h3>"${question.question}"</h3>
                     <p>${question.answers}</p>
+                    <p class="explanation">"${question.justification}"</p>
                 </div>`
         }
     });
