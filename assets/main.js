@@ -25,9 +25,8 @@ function nextQuiz(){
     nexttt();
 }
 
-
 function start(){
-            
+
     document.querySelector('.information-card').style.display = "none";
     document.querySelector('.questions-card').style.display = "block";
     showResult.style.display="none";
@@ -39,16 +38,18 @@ function start(){
     nexttt();
 }
 
+
 function check(num){
-    if(questions[index].options[num].correct){
+    if(questions[index].options[num].text == questions[index].answer){
         result++;
     }
     else{
         questions[index].incorrect="true";
-        console.log(questions);
     }
     nextQuiz();
+    console.log(result);
 }
+
 
 function show(question){
     if(index<questions.length){
@@ -71,18 +72,8 @@ function nexttt(){
     show(quiz_questions[index]);
 }
 
-// //progress bar
-// var progress = 50; // current progress
-// var progressBar = document.querySelector('.progress-bar');
-// progressBar.setAttribute('aria-valuenow', progress);
-// progressBar.style.width = progress + '%';
-
-
-
-
 let bodyContainer = document.getElementsByTagName('container');
 let btnCircleChose = document.getElementsByTagName('h3');
-
 
 bodyContainer[0].style.display = "block";
 bodyContainer[1].style.display = "none";
@@ -116,11 +107,10 @@ document.querySelector("#showCorrection").addEventListener('click',()=>{
         if(question.incorrect=="true"){
             html+=`<div class="justification">
                     <h3>"${question.question}"</h3>
-                    <p>${question.answers}</p>
+                    <p>${question.answer}</p>
                     <p class="explanation">"${question.justification}"</p>
                 </div>`
         }
     });
     resultCard.innerHTML = html;
     });
-

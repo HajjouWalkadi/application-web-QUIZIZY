@@ -44,8 +44,7 @@
             and give you detailed results, so you can flag specific topics for additional review. If you’re renewing a certification that’s expiring,
             you may want to try starting with a Practice Quiz. It’ll help you gauge where your knowledge holds up, 
             and where you may need to refresh your skills or learn some new ones.</p>
-            <!-- <button class="btn-startnow" hre>Test your knowledge now</button> -->
-            <a href="quizpage.html" class="btn-startnow">Test your knowledge now</a>
+           <button><a href="quizpage.html" class="btn-startnow">Test your knowledge now</a></button>
         </div>
         
           <!-- <button>Test your knowledge</button> -->

@@ -46,7 +46,7 @@
             </div>
         </div>
         <div id="question" ></div>
-        <div class="cartes-container" id="cartes-container">
+        <div class="cartes-container container" id="cartes-container">
             <button class="cartes" id="options1" onclick="check(0)"></button>
             <button class="cartes" id="options2" onclick="check(1)"></button>
             <button class="cartes" id="options3" onclick="check(2)"></button>
@@ -56,7 +56,7 @@
 
         <!-- <button class="submitbtn" onclick="nextQuiz()">Submit answer</button> -->
     </container>
-    <container class="card result-card" id="result-card" style="display: none;">
+    <container class="card result-card container" id="result-card" style="display: none;">
             <div class="score">
                 <p  style="color: #1A4D2E; font-size: large;">congratulations, you have reached the end of the quiz</p>
                 <h4  style="color: #FF9F29;">Your score</h4>
@@ -68,7 +68,8 @@
 
 </div>
           
-    <script src="../assets/js/data.js"></script>
+    <script src="../assets/js/ajax.js"></script>
+    <!-- <script src="../assets/js/data.js"></script> -->
     <script src="../assets/main.js"></script>
     
 </body>
