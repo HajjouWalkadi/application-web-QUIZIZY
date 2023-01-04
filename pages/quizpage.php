@@ -58,8 +58,6 @@
             <button class="cartes" id="options4" onclick="check(3)"></button>
         </div>
         <button id="showResult" onclick="ShowResults()">Show results</button>
-
-        <!-- <button class="submitbtn" onclick="nextQuiz()">Submit answer</button> -->
     </container>
     <container class="card result-card container" id="result-card" style="display: none;">
             <div class="score">
@@ -73,7 +71,6 @@
 </div>
           
     <script src="../assets/js/ajax.js"></script>
-    <!-- <script src="../assets/js/data.js"></script> -->
     <script src="../assets/main.js"></script>
     
 </body>

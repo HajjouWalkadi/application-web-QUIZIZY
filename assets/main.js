@@ -15,31 +15,9 @@ let circle3 = document.getElementById("corcile3");
 let showResult =document.getElementById("showResult");
 let resultCard = document.getElementById("result-card");
 let YourResult =document.getElementById("YourResult");
-// console.log(object);
 let result=0;
 let countingTime;
-// function createData(name,scor) {
 
-//     // console.log("name :"+name + "scor :"+scor);
-//     var xhr = new XMLHttpRequest();
-//     xhr.onload = function () {
-//         if (this.readyState == 4 && this.status == 200) {
-//             console.log(this.responseText);
-//         } else {
-//         console.error();
-//         }
-//         console.log(xhr.readyState, xhr.status);
-//     };
-//     xhr.open("POST", "../../classes/getquestions.php");
-//     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-//     xhr.send("name=" +name + "&scor="+ scor );
-//   }
-
-
-// function startQuiz(){
-
-//     start();
-// }
 
 function nextQuiz(){
     index++;
@@ -93,26 +71,6 @@ function nexttt(){
     }
 }
 
-// let bodyContainer = document.getElementsByTagName('container');
-// let btnCircleChose = document.getElementsByTagName('h3');
-
-// bodyContainer[0].style.display = "block";
-// bodyContainer[1].style.display = "none";
-// bodyContainer[2].style.display = "none";
-
-// function changeContenu(index){
-//     bodyContainer[0].style.display = "none";
-//     bodyContainer[1].style.display = "none";
-//     bodyContainer[2].style.display = "none";
-
-//     btnCircleChose[0].style.color = "#FAF3E3";
-//     btnCircleChose[1].style.color = "#FAF3E3";
-//     btnCircleChose[2].style.color = "#FAF3E3";
-
-//     bodyContainer[index].style.display = "block";
-//     btnCircleChose[index].style.color = "green";
-
-// }
 
 function ShowResults(){
     document.querySelector('.information-card').style.display = "none";

@@ -1,6 +1,5 @@
 
 
-
 var ajax = new XMLHttpRequest();
 var method = "POST";
 var url = "../classes/getquestions.php";
