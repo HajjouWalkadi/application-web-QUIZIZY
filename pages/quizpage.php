@@ -15,7 +15,7 @@
 <body style="background-color:#2C394B;">
     <div class="wrapper">
         <ol class="c-stepper">
-          <li class="c-stepper__item activeStep" style="color: green">
+          <li class="c-stepper__item activeStep" style="color: #FF9F29">
             <h3 class="c-stepper__title ">Informations</h3>
           </li>
           <li class="c-stepper__item"id="corcile2" style="color: #FAF3E3">
@@ -30,7 +30,11 @@
         <div class="">
             <div class="container-info">
                 <h4>Informations</h4>
-                <p>This quiz includes 10 questions in total. It consists of AWS Cloud. Each question you receive is explained in detail at the end of your practice test for better understanding.</p>
+                <p>This quiz includes 10 questions in total. It consists of AWS Cloud. Each question you receive is explained in detail at the end of your practice test for better understanding.<br> Here are some instructions to follow:<br><br>
+                <b>*Take the time to read each question and answer choices carefully. Do not skip questions or make hasty decisions.<br><br>
+                *If you don't know the answer to a question, try to find some logic or clue in the question or in the answer choices that will help you eliminate certain answers and make a more informed choice.<br><br>
+                *Keep an eye on your time. If you feel rushed, feel free to quickly skip through questions to which you already know the answer or have no idea.<br><br>
+                *Stay calm and focused during the quiz</b></p>
             </div>
             <div>
                 <button class="btn-info active" id="next" onclick="start()">Start quiz</button>
