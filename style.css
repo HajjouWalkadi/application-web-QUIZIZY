@@ -1,6 +1,10 @@
 body {
   justify-content: center;
   font-family: "Times New Roman", Times, serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 h2 {
@@ -42,16 +46,13 @@ p {
   width: 50%;
   box-shadow: 0 0 20px 4px #FF9F29;
   width: 600px;
-  overflow: hidden;
-  margin-bottom: 10em;
-  margin-left: 20rem;
+  margin-top: 3rem;
   padding-bottom: 1rem;
 }
 
 .information-card {
   box-shadow: 0 0 20px 4px #FF9F29;
   border-radius: 15px;
-  position: absolute;
   background-color: #FAF3E3;
   width: 50%;
   text-align: center;
@@ -63,8 +64,8 @@ p {
 }
 .btn-info:hover {
   background: none;
-  border: 1px solid #1A4D2E;
-  color: #1A4D2E;
+  border: 1px solid #716F81;
+  color: #716F81;
 }
 .btn-info:active {
   background-color: #FF9F29;
@@ -86,9 +87,9 @@ h4 {
 }
 
 button {
-  background: #1A4D2E;
+  background: #716F81;
   color: #FAF3E3;
-  border: 1px solid #1A4D2E;
+  border: 1px solid #716F81;
   padding: 0.6rem;
   border-radius: 10px;
   cursor: pointer;
@@ -178,7 +179,6 @@ button {
   }
 }
 .questions-card {
-  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -202,6 +202,8 @@ button {
 
 .c-stepper {
   display: flex;
+  margin: 0;
+  padding: 0;
 }
 
 .c-stepper__item {
@@ -260,20 +262,18 @@ body {
   width: var(--circle-size);
   height: var(--circle-size);
   border-radius: 50%;
-  background-color: #1A4D2E;
+  background-color: #716F81;
   transition: 0.3s ease-in;
 }
 
 #showResult {
   width: 30%;
   margin-top: 1rem;
-  left: 38%;
-  position: absolute;
   transition: 0.3s;
 }
 #showResult:hover {
   background: none;
-  border: 1px solid #1A4D2E;
+  border: 1px solid #716F81;
   color: #FAF3E3;
 }
 #showResult:active {
@@ -287,6 +287,12 @@ body {
   justify-content: center;
 }
 
+#result-card {
+  display: none;
+  display: flex;
+  flex-direction: column;
+}
+
 #showCorrection {
   width: 30%;
   margin-top: 1rem;
@@ -294,7 +300,7 @@ body {
 }
 #showCorrection:hover {
   background-color: black;
-  border: 1px solid #1A4D2E;
+  border: 1px solid #716F81;
   color: #FAF3E3;
 }
 #showCorrection:active {
@@ -318,5 +324,14 @@ body {
 
 .explanation {
   color: #FF9F29;
-  border: 2px solid #1A4D2E;
+  border: 2px solid #716F81;
+}
+
+#js_timer {
+  text-align: center;
+}
+
+#timer {
+  color: #FF9F29;
+  margin: 10px auto;
 }/*# sourceMappingURL=style.css.map */

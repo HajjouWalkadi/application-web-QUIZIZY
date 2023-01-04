@@ -12,16 +12,16 @@
     <!-- UniIcon CDN Link  -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 </head>
-<body style="background-color:#000000;">
+<body style="background-color:#2C394B;">
     <div class="wrapper">
         <ol class="c-stepper">
-          <li onclick="changeContenu(0)" class="c-stepper__item activeStep" style="color: green">
+          <li class="c-stepper__item activeStep" style="color: green">
             <h3 class="c-stepper__title ">Informations</h3>
           </li>
-          <li onclick="changeContenu(1)" class="c-stepper__item"id="corcile2" style="color: #FAF3E3">
+          <li class="c-stepper__item"id="corcile2" style="color: #FAF3E3">
             <h3 class="c-stepper__title" id="step2">Quiz</h3>
           </li>
-          <li onclick="changeContenu(2)" class="c-stepper__item" id="corcile3" style="color: #FAF3E3">
+          <li class="c-stepper__item" id="corcile3" style="color: #FAF3E3">
             <h3 class="c-stepper__title" id="step3">Résultat</h3>
           </li>
         </ol>
@@ -30,10 +30,10 @@
         <div class="">
             <div class="container-info">
                 <h4>Informations</h4>
-                <p>This quiz includes 10 questions in total that you can access even on your mobile. It consists of AWS Cloud. Each question you receive is explained in detail at the end of your practice test for better understanding.</p>
+                <p>This quiz includes 10 questions in total. It consists of AWS Cloud. Each question you receive is explained in detail at the end of your practice test for better understanding.</p>
             </div>
             <div>
-                <button class="btn-info active" id="next" onclick="startQuiz()">Start quiz</button>
+                <button class="btn-info active" id="next" onclick="start()">Start quiz</button>
             </div>
         </div>
     </container>
@@ -45,6 +45,7 @@
                 <div class="progressing" id="progressing"></div>
             </div>
         </div>
+        <h1 id="timer">00:30</h1>
         <div id="question" ></div>
         <div class="cartes-container container" id="cartes-container">
             <button class="cartes" id="options1" onclick="check(0)"></button>
@@ -62,7 +63,6 @@
                 <h4  style="color: #FF9F29;">Your score</h4>
                 <span><span id="YourResult"></span>/10</span>
                 <button id="showCorrection">Show correction</button>
-                <!-- <button id="tryagain" onclick="startQuiz()">try again</button> -->
             </div>
     </container>
 

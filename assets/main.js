@@ -14,12 +14,33 @@ let circle2 = document.getElementById("corcile2");
 let circle3 = document.getElementById("corcile3");
 let showResult =document.getElementById("showResult");
 let resultCard = document.getElementById("result-card");
-let YourResult =document.getElementById("YourResult")
+let YourResult =document.getElementById("YourResult");
+// console.log(object);
 let result=0;
-function startQuiz(){
+let countingTime;
+// function createData(name,scor) {
 
-    start();
-}
+//     // console.log("name :"+name + "scor :"+scor);
+//     var xhr = new XMLHttpRequest();
+//     xhr.onload = function () {
+//         if (this.readyState == 4 && this.status == 200) {
+//             console.log(this.responseText);
+//         } else {
+//         console.error();
+//         }
+//         console.log(xhr.readyState, xhr.status);
+//     };
+//     xhr.open("POST", "../../classes/getquestions.php");
+//     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+//     xhr.send("name=" +name + "&scor="+ scor );
+//   }
+
+
+// function startQuiz(){
+
+//     start();
+// }
+
 function nextQuiz(){
     index++;
     nexttt();
@@ -28,10 +49,9 @@ function nextQuiz(){
 function start(){
 
     document.querySelector('.information-card').style.display = "none";
-    document.querySelector('.questions-card').style.display = "block";
+    document.querySelector('.questions-card').style.display = "flex";
     showResult.style.display="none";
     quiz_questions =  questions.sort(()=> Math.random() - .5);
-    console.log(questions);
     index = 0;
     step2.classList.add('greencolor');
     circle2.classList.add("activeStep");
@@ -47,12 +67,10 @@ function check(num){
         questions[index].incorrect="true";
     }
     nextQuiz();
-    console.log(result);
 }
 
 
 function show(question){
-    if(index<questions.length){
         optionsElement1.innerText = question.options[0].text;        
         optionsElement2.innerText = question.options[1].text;        
         optionsElement3.innerText = question.options[2].text;        
@@ -62,41 +80,44 @@ function show(question){
         for(let i=0;i<index+2;i++){
             progressing.style.width = i*3.5+"rem";
         }
-    }
 }
 function nexttt(){
-    if(index > 9){ 
+    if(index > questions.length-1){ 
+        clearInterval(countingTime);
         showResult.style.display="block";
         YourResult.innerHTML = result;
+    }else{
+        show(quiz_questions[index]);
+        clearInterval(countingTime);
+        time();
     }
-    show(quiz_questions[index]);
 }
 
-let bodyContainer = document.getElementsByTagName('container');
-let btnCircleChose = document.getElementsByTagName('h3');
+// let bodyContainer = document.getElementsByTagName('container');
+// let btnCircleChose = document.getElementsByTagName('h3');
 
-bodyContainer[0].style.display = "block";
-bodyContainer[1].style.display = "none";
-bodyContainer[2].style.display = "none";
+// bodyContainer[0].style.display = "block";
+// bodyContainer[1].style.display = "none";
+// bodyContainer[2].style.display = "none";
 
-function changeContenu(index){
-    bodyContainer[0].style.display = "none";
-    bodyContainer[1].style.display = "none";
-    bodyContainer[2].style.display = "none";
+// function changeContenu(index){
+//     bodyContainer[0].style.display = "none";
+//     bodyContainer[1].style.display = "none";
+//     bodyContainer[2].style.display = "none";
 
-    btnCircleChose[0].style.color = "#FAF3E3";
-    btnCircleChose[1].style.color = "#FAF3E3";
-    btnCircleChose[2].style.color = "#FAF3E3";
+//     btnCircleChose[0].style.color = "#FAF3E3";
+//     btnCircleChose[1].style.color = "#FAF3E3";
+//     btnCircleChose[2].style.color = "#FAF3E3";
 
-    bodyContainer[index].style.display = "block";
-    btnCircleChose[index].style.color = "green";
+//     bodyContainer[index].style.display = "block";
+//     btnCircleChose[index].style.color = "green";
 
-}
+// }
 
 function ShowResults(){
     document.querySelector('.information-card').style.display = "none";
     document.querySelector('.questions-card').style.display = "none";
-    resultCard.style.display="block";
+    document.querySelector('#result-card').style.display="block";
     step3.classList.add('greencolor');
     circle3.classList.add("activeStep");
 }
@@ -109,8 +130,32 @@ document.querySelector("#showCorrection").addEventListener('click',()=>{
                     <h3>"${question.question}"</h3>
                     <p>${question.answer}</p>
                     <p class="explanation">"${question.justification}"</p>
-                </div>`
+                  </div>`
         }
     });
     resultCard.innerHTML = html;
-    });
+    resultCard.style.flexDirection="column";
+});
+
+    
+
+    let timing = document.getElementById('timer');
+
+    function time(){
+        let seconds=30;
+        countingTime=setInterval(function(){
+          seconds--;
+          if(seconds<10){
+            seconds ="0"+seconds;
+          }
+          timing.innerText='00 : '+seconds;
+          if(seconds==00){
+            index++;
+            questions[index-1].incorrect="true";
+            nexttt();
+          }
+        },1000)
+    }
+
+
+
